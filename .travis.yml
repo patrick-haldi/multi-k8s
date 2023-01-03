@@ -15,7 +15,7 @@ after_success:
   - docker build -t phygan/multi-server ./server
   - docker build -t phygan/multi-worker ./worker
   # Log in
-  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
+  - echo '$DOCKER_PASSWORD' | docker login -u "$DOCKER_ID" --password-stdin
   # push to docker hub
   - docker push phygan/multi-client
   - docker push phygan/multi-nginx
