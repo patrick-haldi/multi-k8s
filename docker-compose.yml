@@ -1,4 +1,4 @@
-version: '3'
+version: "3"
 services:
   client:
     image: phygan/multi-client
@@ -28,4 +28,4 @@ services:
     mem_limit: 128m
     hostname: nginx
     ports:
-      - 80:80
+      - "80:80"
