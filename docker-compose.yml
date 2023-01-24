@@ -1,11 +1,11 @@
 version: "3"
 services:
   client:
-    image: phygan/multi-client
+    image: phygan/multi-client-github
     mem_limit: 128m
     hostname: client
   server:
-    image: phygan/multi-server
+    image: phygan/multi-server-github
     mem_limit: 128m
     hostname: api
     environment:
@@ -17,7 +17,7 @@ services:
       - PGPASSWORD=$PGPASSWORD
       - PGDATABASE=$PGDATABASE
   worker:
-    image: phygan/multi-worker
+    image: phygan/multi-worker-github
     mem_limit: 128m
     hostname: worker
     environment:
@@ -27,7 +27,7 @@ services:
     depends_on:
       - server
       - client
-    image: phygan/multi-nginx
+    image: phygan/multi-nginx-github
     mem_limit: 128m
     hostname: nginx
     ports:
