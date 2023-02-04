@@ -57,6 +57,6 @@ jobs:
       - name: Apply
         run: |-
           kubectl apply -f k8s
-          kubectl set image deployments/server-deployment server=phygan/multi-server-k8s-pgfix-gh:${{ env.SHA }}
-          kubectl set image deployments/client-deployment client=phygan/multi-client-k8s-gh:${{ env.SHA }}
-          kubectl set image deployments/worker-deployment worker=phygan/multi-worker-k8s-gh:${{ env.SHA }}
+          kubectl set image deployments/client-deployment my-client=phygan/multi-client-k8s-gh:${{ env.SHA }}
+          kubectl set image deployments/server-deployment my-server=phygan/multi-server-k8s-pgfix-gh:${{ env.SHA }}
+          kubectl set image deployments/worker-deployment my-worker=phygan/multi-worker-k8s-gh:${{ env.SHA }}
